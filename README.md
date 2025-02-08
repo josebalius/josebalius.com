@@ -16,6 +16,7 @@ My name is Jose Garcia-Balius. I am a software engineer based in Miami, FL with 
 
 # Thoughts
 
+- [Post twitter post](./thoughts/post-twitter.md)
 - [Thoughts program](./thoughts/program.md)
 
 ---
