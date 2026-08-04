@@ -1,9 +1,9 @@
-# A tiny static site image. BusyBox's httpd is enough for this site and keeps
-# deployments independent from the separate thoughts generator repository.
-FROM alpine:3.20
+# A small static site image using Nginx's maintained Alpine distribution.
+FROM nginx:alpine
 
-COPY public /var/www
+COPY public /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
-CMD ["/bin/busybox", "httpd", "-f", "-p", "8080", "-h", "/var/www"]
+CMD ["nginx", "-g", "daemon off;"]
