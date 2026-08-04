@@ -6,4 +6,4 @@ COPY public /var/www
 
 EXPOSE 8080
 
-CMD ["httpd", "-f", "-p", "8080", "-h", "/var/www"]
+CMD ["/bin/busybox", "httpd", "-f", "-p", "8080", "-h", "/var/www"]
